@@ -1,0 +1,15 @@
+name: "python-helloworld Workflow"
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - run: python --version
+
+          #- name: "docker"
+          #uses: docker://alpine:3.8
+          #with:
+          #token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
